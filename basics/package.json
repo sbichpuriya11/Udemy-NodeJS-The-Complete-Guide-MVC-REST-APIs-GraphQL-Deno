@@ -1,0 +1,16 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app-routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon assignment01.js",
+    "start-server": "node app.js"
+  },
+  "author": "Somil Bichpuriya",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
