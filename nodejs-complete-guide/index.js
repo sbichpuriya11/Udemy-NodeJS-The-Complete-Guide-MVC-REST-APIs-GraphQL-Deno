@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
-
+const path = require("path");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/admin", adminRoutes);
@@ -13,7 +13,7 @@ app.use(shopRoutes);
 app.use((req, res, next) => {
   res
     .status(404)
-    .send('<h3 style="font-family:sf pro display">Page not found</h3>');
+    .sendFile(path.join(__dirname, "views", "page-not-found.html"));
 });
 
 //should go at last after defining and setting up all routes/models and code logic
