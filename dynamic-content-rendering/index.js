@@ -7,12 +7,15 @@ const shopRoutes = require("./routes/shop");
 
 const path = require("path");
 
+app.set("view engine", "pug");
+app.set("views", "views");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //registering static folder
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/admin", adminRoutes);
+app.use("/admin", adminRoutes.routes);
 
 app.use(shopRoutes);
 
