@@ -20,9 +20,12 @@ app.use("/admin", adminRoutes.routes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-  res
-    .status(404)
-    .sendFile(path.join(__dirname, "views", "page-not-found.html"));
+  // res
+  //   .status(404)
+  //   .sendFile(path.join(__dirname, "views", "page-not-found.html"));
+
+  //displaying dynamic content
+  res.render("404", { pageTitle: "Page not found" });
 });
 
 //should go at last after defining and setting up all routes/models and code logic
