@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    {{#if formCSS}}
+      <link rel="stylesheet" href="/css/product.css" />
+    {{/if}}
+    {{#if productCSS}}
+      <link rel="stylesheet" href="/css/shop.css" />
+    {{/if}}
+    {{#if pageNotFound}}
+      <link rel="stylesheet" href="/css/error.css" />
+    {{/if}}
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a href="/" class="{{#if activeShop}}active{{/if}}">Shop</a>
+        <a href="/admin/add-product" class="{{#if activeAddProduct}}active{{/if}}">Add Product</a>
+      </div>
+    </div>
+    {{{body}}}
+  </body>
+</html>

@@ -1,27 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{pageTitle}}</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/product.css" />
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="container">
-        <a href="/">Shop</a>
-        <a href="/admin/add-product">Add Product</a>
-      </div>
-    </div>
-
-    <div class="main-container">
-      <div class="form-container">
-        <form action="/admin/add-product" method="post">
-          <input type="text" name="product" placeholder="Enter your name" />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
+{{{body}}}
+<div class="main-container">
+  <div class="form-container">
+    <form action="/admin/add-product" method="post">
+      <input type="text" name="product" placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
