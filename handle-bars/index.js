@@ -8,7 +8,12 @@ const expressHbs = require("express-handlebars");
 const app = express();
 
 //defining template engines
-app.engine("handlebars", expressHbs());
+app.engine(
+  "handlebars",
+  expressHbs({ layoutsDir: "views/layouts/", defaultLayout: "main-layout" })
+); //pass configures for layouts
+//for handlebars layout engine does not recognize hbs exntension, so we need to use handlebars only as an extension to layout file. so in configuration pass , extname:'hbs'
+
 app.set("view engine", "handlebars");
 app.set("views", "views");
 
