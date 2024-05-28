@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/shop.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a href="/">Shop</a>
+        <a href="/admin/add-product">Add Product</a>
+      </div>
+    </div>
+
+    <div class="main-container">
+      {{#if hasProducts}}
+        <div class="card-container">
+          {{#each prods}}
+            <div class="card">
+              <div class="card__header">
+                <h1>{{this.title}}</h1>
+              </div>
+              <div class="card__image">
+                <img
+                  src="https://static.toiimg.com/photo/80387978.cms"
+                  alt="Card Image 1"
+                />
+              </div>
+              <div class="card__content">
+                <p>This is a description for card 1.</p>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{else}}
+        <h3>No product found</h3>
+      {{/if}}
+    </div>
+  </body>
+</html>
