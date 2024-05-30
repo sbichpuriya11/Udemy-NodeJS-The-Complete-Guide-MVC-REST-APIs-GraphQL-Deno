@@ -31,7 +31,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", admin_router.router);
 app.use(shop_router);
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "views", "404.html"));
+  //res.sendFile(path.join(__dirname, "views", "404.html"));
+  res.render("404", { pageTitle: "404 - Page not found" });
 });
 // app.use(page_not_found_router);
 
