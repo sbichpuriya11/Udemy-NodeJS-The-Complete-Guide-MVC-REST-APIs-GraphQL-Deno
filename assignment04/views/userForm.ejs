@@ -1,0 +1,36 @@
+<%- include("includes/head.ejs")%>
+    <link rel="stylesheet" href="/css/registrationForm.css">
+    </head>
+
+    <body>
+
+        <%- include("includes/navbar.ejs")%>
+
+            <div class="container">
+                <div class="card">
+                    <h2>Contact Us</h2>
+                    <form action="/user" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name.."
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email.."
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Write something.."
+                                style="height:200px" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <%- include("includes/end.ejs")%>

@@ -1,0 +1,46 @@
+/* Form styles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    /* Inherit parent font family */
+}
+
+.form-control:focus {
+    outline: none;
+    /* Remove default focus outline */
+    border-color: #007bff;
+    /* Change border color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    /* Add a light blue shadow on focus */
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    /* Inherit parent font family */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

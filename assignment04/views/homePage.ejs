@@ -1,0 +1,42 @@
+<%- include("includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/home.css">
+    </head>
+
+    <body>
+
+        <%- include("includes/navbar.ejs") %>
+
+            <div class="container">
+                <h2>User Data</h2>
+                <div id="formData">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (userData.length>0){%>
+                                <% for(let user of userData){%>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <%= user.name%>
+                                        </td>
+                                        <td data-label="Email">
+                                            <%= user.email%>
+                                        </td>
+                                        <td data-label="Message">
+                                            <%= user.message%>
+                                        </td>
+                                    </tr>
+                                    <%}%>
+                                        <%} else{%>
+                                            <td colspan="3" class="no-data">No data found</td>
+                                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <%- include("includes/end.ejs") %>
