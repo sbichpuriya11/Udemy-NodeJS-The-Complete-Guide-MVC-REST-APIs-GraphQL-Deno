@@ -5,7 +5,7 @@ const shop_router = require("./routes/shop");
 //const page_not_found_router = require("./routes/404");
 const path = require("path");
 const bodyParser = require("body-parser");
-const { pageNotFound } = require("./controllers/notFound");
+const { pageNotFound } = require("./controllers/error");
 
 // Initializing express
 const app = express();
