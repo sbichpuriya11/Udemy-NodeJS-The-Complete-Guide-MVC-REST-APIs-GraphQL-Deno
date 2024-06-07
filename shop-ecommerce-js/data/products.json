@@ -1,16 +1,1 @@
-[
-    {
-        "uid": "e8Civ0HoDy",
-        "productName": "Maruti Suzuki Swift",
-        "productPrice": "17450",
-        "productImage": "https://www.marutisuzuki.com/-/media/images/maruti/marutisuzuki/car/car-profile-shots/solid-redn.ashx",
-        "productDescription": "The Epic New Swift is the complete safety package. Its comes with 6 Airbags standard across all variants and additional safety features to keep the risk of injury to a minimum and safety to the max."
-    },
-    {
-        "uid": "iPjiGoHXAK",
-        "productName": "Redmi Note 13 5G",
-        "productPrice": "16,999",
-        "productImage": "https://i02.appmifile.com/463_operatorx_operatorx_opx/11/01/2024/e02e51cd6efb5f2282e6921128b2618a.png?thumb=1&w=500&q=85",
-        "productDescription": "With super-thin bezels, the 16.94cm(6.67) AMOLED display is a visual delight. Watch all your favourite shows, movies and play your favourite games on a deeply vivid and immersive display. Moreover, Redmi Note 13 5G's display has been optimized for improved touch recognition and control, preventing accidental triggers from water."
-    }
-]
+[{"uid":"e8Civ0HoDy","productName":"Maruti Suzuki Swift","productPrice":"14372.47","productImage":"https://www.marutisuzuki.com/-/media/images/maruti/marutisuzuki/car/car-profile-shots/solid-redn.ashx","productDescription":"The Epic New Swift is the complete safety package. Its comes with 6 Airbags standard across all variants and additional safety features to keep the risk of injury to a minimum and safety to the max.\r\n                    "},{"uid":"iPjiGoHXAK","productName":"Redmi Note 13 5G","productPrice":"203.64","productImage":"https://i02.appmifile.com/463_operatorx_operatorx_opx/11/01/2024/e02e51cd6efb5f2282e6921128b2618a.png?thumb=1&w=500&q=85","productDescription":"With super-thin bezels, the 16.94cm(6.67) AMOLED display is a visual delight. Watch all your favorite shows, movies and play your favorite games on a deeply vivid and immersive display.\r\n                    "}]

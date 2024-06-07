@@ -2,6 +2,7 @@ const products = [];
 const path = require("path");
 const fs = require("fs");
 const ShortUniqueId = require("short-unique-id");
+const e = require("express");
 
 const filePath = path.join(__dirname, "..", "data", "products.json");
 
@@ -13,7 +14,8 @@ const getProductsFromFile = (cb) => {
 };
 
 exports.Product = class {
-  constructor(productName, productPrice, productImage, productDescription) {
+  constructor(id, productName, productPrice, productImage, productDescription) {
+    this.id = id;
     this.productName = productName;
     this.productPrice = productPrice;
     this.productImage = productImage;
@@ -21,12 +23,30 @@ exports.Product = class {
   }
 
   save() {
-    this.uid = new ShortUniqueId({ length: 10 }).rnd().toString();
     getProductsFromFile((products) => {
-      products.push(this);
-      fs.writeFile(filePath, JSON.stringify(products), (err) => {
-        console.log(err);
-      });
+      if (this.id) {
+        const existingProductIndex = products.findIndex(
+          (prod) => prod.uid === this.id
+        );
+        const updatedProducts = [...products];
+        updatedProducts[existingProductIndex] = {
+          uid: this.id,
+          productName: this.productName,
+          productPrice: this.productPrice,
+          productImage: this.productImage,
+          productDescription: this.productDescription,
+        };
+        console.log(updatedProducts);
+        fs.writeFile(filePath, JSON.stringify(updatedProducts), (err) => {
+          console.log(err);
+        });
+      } else {
+        this.uid = new ShortUniqueId({ length: 10 }).rnd().toString();
+        products.push(this);
+        fs.writeFile(filePath, JSON.stringify(products), (err) => {
+          console.log(err);
+        });
+      }
     });
   }
 
