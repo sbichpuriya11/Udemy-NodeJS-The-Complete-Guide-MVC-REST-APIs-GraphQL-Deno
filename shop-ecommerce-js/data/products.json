@@ -1,23 +1,13 @@
 [
     {
-        "productName": "Pencil",
-        "productPrice": "1.3",
-        "productImage": "https://www.shutterstock.com/image-vector/pencil-260nw-152521652.jpg",
-        "productDescription": "This is my dummy pencil"
-    },
-    {
-        "productName": "Pencil",
-        "productPrice": "12",
-        "productImage": "https://www.shutterstock.com/image-vector/pencil-260nw-152521652.jpg",
-        "productDescription": "Dummy Pencil"
-    },
-    {
+        "uid": "e8Civ0HoDy",
         "productName": "Maruti Suzuki Swift",
         "productPrice": "17450",
         "productImage": "https://www.marutisuzuki.com/-/media/images/maruti/marutisuzuki/car/car-profile-shots/solid-redn.ashx",
         "productDescription": "The Epic New Swift is the complete safety package. Its comes with 6 Airbags standard across all variants and additional safety features to keep the risk of injury to a minimum and safety to the max."
     },
     {
+        "uid": "iPjiGoHXAK",
         "productName": "Redmi Note 13 5G",
         "productPrice": "16,999",
         "productImage": "https://i02.appmifile.com/463_operatorx_operatorx_opx/11/01/2024/e02e51cd6efb5f2282e6921128b2618a.png?thumb=1&w=500&q=85",

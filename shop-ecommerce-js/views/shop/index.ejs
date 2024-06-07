@@ -11,7 +11,9 @@
                     <% for (let product of prods){ %>
                         <div class="card">
 
-                            <img src="<%= product.productImage %>" alt="<%= product.productName %>">
+                            <div class="image-container">
+                                <img src="<%= product.productImage %>" alt="<%= product.productName %>">
+                            </div>
                             <div class="card-content">
                                 <h2 class="card-title">
                                     <%= product.productName %>
@@ -21,7 +23,9 @@
                                 <p class="card-description">
                                     <%= product.productDescription%>
                                 </p>
-                                <button class="card-button">Add to Cart</button>
+                                <div class="card-footer">
+                                    <%- include("../includes/add-to-cart.ejs",{product:product}) %>
+                                </div>
                             </div>
 
                         </div>

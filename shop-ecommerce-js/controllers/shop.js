@@ -9,6 +9,16 @@ exports.displayProducts = (req, res, next) => {
     });
   });
 };
+exports.displayProduct = (req, res, next) => {
+  const prodId = req.params.productId;
+  Product.findById(prodId, (product) => {
+    res.render("shop/product-details", {
+      product: product,
+      pageTitle: product.productName,
+      path: "/products",
+    });
+  });
+};
 
 exports.getIndex = (req, res, next) => {
   Product.fetchAll((products) => {
@@ -27,9 +37,19 @@ exports.getCart = (req, res, next) => {
   });
 };
 
+exports.postCart = (req, res, next) => {
+  const prodId = req.body.productId;
+  console.log(prodId);
+  res.redirect("/cart");
+};
+
 exports.getCheckout = (req, res, next) => {
   res.render("shop/checkout", {
     path: "/checkout",
     pageTitle: "Checkout",
   });
+};
+
+exports.getOrders = (req, res, next) => {
+  res.render("shop/orders", { path: "/orders", pageTitle: "Orders" });
 };
