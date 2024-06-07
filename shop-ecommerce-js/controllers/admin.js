@@ -45,11 +45,13 @@ exports.getPostProducts = (req, res, next) => {
   const { productName, productPrice, productDescription, productImage } =
     req.body;
   const product = new Product(
+    null,
     productName,
     productPrice,
     productImage,
     productDescription
   );
+  console.log("Product:", product);
   product.save();
   res.redirect("/");
 };
@@ -62,4 +64,10 @@ exports.getProducts = (req, res, next) => {
       path: "/admin/products",
     });
   });
+};
+
+exports.postDeleteProduct = (req, res, next) => {
+  const id = req.body.productId;
+  Product.deleteById(id);
+  res.redirect("/admin/products");
 };

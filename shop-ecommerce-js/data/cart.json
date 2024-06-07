@@ -1,1 +1,13 @@
-{"products":[{"id":"e8Civ0HoDy","qty":2},{"id":"iPjiGoHXAK","qty":1}],"totalPrice":null}
+{
+    "products": [
+        {
+            "uid": "e8Civ0HoDy",
+            "qty": 2
+        },
+        {
+            "uid": "iPjiGoHXAK",
+            "qty": 1
+        }
+    ],
+    "totalPrice": 28948.579999999998
+}

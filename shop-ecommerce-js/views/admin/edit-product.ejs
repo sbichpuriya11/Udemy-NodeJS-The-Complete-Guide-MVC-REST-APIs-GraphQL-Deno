@@ -23,8 +23,8 @@
                 </div>
                 <div class="form-group">
                     <label for="productDescription">Description</label>
-                    <textarea id="productDescription" name="productDescription" rows="5" required><%if(editing){%><%=product.productDescription%><%}%>
-                    </textarea>
+                    <textarea id="productDescription" name="productDescription" rows="5"
+                        required><%if(editing){%><%=product.productDescription%><%}%></textarea>
                 </div>
                 <%if(editing){%>
                     <input type="hidden" name="productId" value="<%=product.uid%>">

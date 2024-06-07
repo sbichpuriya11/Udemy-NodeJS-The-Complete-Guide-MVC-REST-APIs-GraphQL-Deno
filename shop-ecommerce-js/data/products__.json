@@ -1,1 +1,23 @@
-[{"productName":"123","productPrice":"123","productImage":"123","productDescription":"123"},{"productName":"eqwe","productPrice":"qeqweq","productImage":"qweqwe","productDescription":"qweqweqwewqeqwe"}]
+[
+    {
+        "uid": "e8Civ0HoDy",
+        "productName": "Maruti Suzuki Swift",
+        "productPrice": "14372.47",
+        "productImage": "https://www.marutisuzuki.com/-/media/images/maruti/marutisuzuki/car/car-profile-shots/solid-redn.ashx",
+        "productDescription": "The Epic New Swift is the complete safety package. Its comes with 6 Airbags standard across all variants and additional safety features to keep the risk of injury to a minimum and safety to the max.\r\n"
+    },
+    {
+        "uid": "iPjiGoHXAK",
+        "productName": "Redmi Note 13 5G",
+        "productPrice": "203.64",
+        "productImage": "https://i02.appmifile.com/463_operatorx_operatorx_opx/11/01/2024/e02e51cd6efb5f2282e6921128b2618a.png?thumb=1&w=500&q=85",
+        "productDescription": "With super-thin bezels, the 16.94cm(6.67) AMOLED display is a visual delight. Watch all your favorite shows, movies and play your favorite games on a deeply vivid and immersive display.\r\n"
+    },
+    {
+        "uid": "SVqtvpdApP",
+        "productName": "Lenovo Legion R25f-30 62.23cms (24.5) Monitor",
+        "productPrice": "194.04",
+        "productImage": "https://p4-ofp.static.pub//fes/cms/2024/02/27/eqccffjzsu5ntcjhmd314t8ki48l7f323582.png",
+        "productDescription": "Unlock the full potential of your monitor and optimize your gaming experience with Lenovo Artery Software. Take advantage of premium functions and tools to push your gaming performance to the limits."
+    }
+]
