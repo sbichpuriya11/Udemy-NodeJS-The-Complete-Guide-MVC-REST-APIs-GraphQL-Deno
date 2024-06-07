@@ -43,7 +43,6 @@ exports.Product = class {
           productImage: this.productImage,
           productDescription: this.productDescription,
         };
-        console.log(updatedProducts);
         fs.writeFile(filePath, JSON.stringify(updatedProducts), (err) => {
           console.log(err);
         });
@@ -61,8 +60,6 @@ exports.Product = class {
     getProductsFromFile((products) => {
       const product = products.find((prod) => prod.uid === id);
       const updatedProducts = products.filter((p) => p.uid !== id);
-
-      console.log("Product>>>>", product);
       fs.writeFile(filePath, JSON.stringify(updatedProducts), (err) => {
         if (!err) {
           Cart.deleteProduct(id, product.productPrice);

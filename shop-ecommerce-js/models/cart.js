@@ -41,7 +41,6 @@ exports.Cart = class {
   }
 
   static deleteProduct(id, productPrice) {
-    console.log(productPrice);
     fs.readFile(filePath, (err, fileContent) => {
       if (err) return;
       const updatedCart = { ...JSON.parse(fileContent) };
@@ -55,6 +54,17 @@ exports.Cart = class {
       fs.writeFile(filePath, JSON.stringify(updatedCart), (err) => {
         console.log(err);
       });
+    });
+  }
+
+  static getCart(cb) {
+    fs.readFile(filePath, (err, fileContent) => {
+      const cart = JSON.parse(fileContent);
+      if (err) {
+        cb(null);
+      } else {
+        cb(cart);
+      }
     });
   }
 };

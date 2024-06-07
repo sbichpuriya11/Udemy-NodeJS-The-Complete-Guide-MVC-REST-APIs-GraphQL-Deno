@@ -51,7 +51,6 @@ exports.getPostProducts = (req, res, next) => {
     productImage,
     productDescription
   );
-  console.log("Product:", product);
   product.save();
   res.redirect("/");
 };
