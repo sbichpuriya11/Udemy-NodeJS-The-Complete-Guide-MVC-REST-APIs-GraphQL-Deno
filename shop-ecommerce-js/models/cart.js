@@ -45,6 +45,7 @@ exports.Cart = class {
       if (err) return;
       const updatedCart = { ...JSON.parse(fileContent) };
       const product = updatedCart.products.find((prod) => prod.uid === id);
+      if (!product) return;
       const productQty = product.qty;
       updatedCart.products = updatedCart.products.filter(
         (prod) => prod.uid !== id
