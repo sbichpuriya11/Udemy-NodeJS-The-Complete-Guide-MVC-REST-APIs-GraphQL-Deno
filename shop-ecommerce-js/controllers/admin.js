@@ -19,8 +19,12 @@ exports.getPostProducts = (req, res, next) => {
   res.redirect("/");
 };
 
-exports.displayProducts = (req, res, next) => {
+exports.getProducts = (req, res, next) => {
   Product.fetchAll((products) => {
-    res.render("shop/product-list", { pageTitle: "Shop", prods: products });
+    res.render("admin/products", {
+      pageTitle: "Admin Products",
+      prods: products,
+      path: "/admin/products",
+    });
   });
 };

@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // defining routes
-app.use("/", admin_router);
+app.use("/admin", admin_router);
 app.use(shop_router);
 app.use(error.notFound);
 // app.use(page_not_found_router);
