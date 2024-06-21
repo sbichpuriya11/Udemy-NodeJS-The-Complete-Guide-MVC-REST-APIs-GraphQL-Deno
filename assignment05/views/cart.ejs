@@ -1,0 +1,63 @@
+<%- include("includes/header.ejs")%>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/css/materialdesignicons.min.css">
+    <!-- Material-UI core -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@mui/material@5.0.4/umd/material.development.js"></script>
+    <script src="https://unpkg.com/@emotion/react@11/umd/react-11.3.0-6a2a2de3.development.min.js"></script>
+    <script src="https://unpkg.com/@emotion/styled@11/umd/styled-11.3.0-6a2a2de3.development.min.js"></script>
+    <link rel="stylesheet" href="/css/cart.css">
+    </head>
+
+    <body>
+        <%- include("includes/navbar.ejs")%>
+            <div class="container">
+                <div class="cart-info">
+                    <h4 class="MuiTypography-weightBold">Cart</h4>
+
+                    <% if(products.length>0){%>
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(product of products){%>
+                                    <tr>
+                                        <td>
+                                            <img src="<%= product.product.image%>" width="30px" />
+                                        </td>
+                                        <td>
+                                            <%= product.product.name%>
+                                        </td>
+                                        <td>$<%= product.product.price%>
+                                        </td>
+                                        <td>
+                                            <%= product.qty%>
+                                        </td>
+                                        <td>$<%= product.product.price * product.qty%>
+                                        </td>
+
+                                    </tr>
+                                    <%}%>
+                                        <tr>
+                                            <td colspan="4" style="text-align:right"><span
+                                                    class="MuiTypography-weightBold">Total:</span></td>
+                                            <td><span class="MuiTypography-weightBold">$<%= cartTotalPrice%></span></td>
+                                        </tr>
+                            </tbody>
+                        </table>
+                        <%}else{%>
+                            <h6>Nothing to display</h6>
+                            <span>Shopping cart is empty</span>
+                            <%}%>
+                </div>
+            </div>
+            <%- include("includes/end.ejs")%>
