@@ -1,0 +1,63 @@
+<%- include("../includes/header.ejs") %>
+    <link rel="stylesheet" href="/css/add-product.css">
+    </head>
+
+    <body>
+        <%- include("../includes/navbar.ejs")%>
+
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col s12 m6 offset-m3">
+                        <div class="card mui-card">
+                            <div class="card-content">
+                                <h5 class="center-align">Product Registration</h5>
+                                <form method="POST"
+                                    action="<%=edit===true?'/admin/edit-product':'/admin/add-product' %>">
+                                    <%if(edit===true){%>
+                                        <di>
+                                            <input type="hidden" value="<%=product.id%>" name="productId" />
+                                        </di>
+                                        <%}%>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="product_name" type="text" class="validate"
+                                                        name="productName" value="<%= edit==true?product.name:''%>">
+                                                    <label for="product_name">Product Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="product_price" type="number" class="validate" step="0.01"
+                                                        name="productPrice" value="<%= edit==true?product.price:''%>">
+                                                    <label for="product_price">Price</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="product_image" type="text" class="validate"
+                                                        name="productImage" value="<%= edit==true?product.image:''%>">
+                                                    <label for="product_image">Image URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <textarea id="product_description" class="materialize-textarea"
+                                                        name="productDescription"><%= edit===true?product.description:""%></textarea>
+                                                    <label for="product_description">Description</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s12 center-align">
+                                                    <button class="btn waves-effect waves-light" type="submit">
+                                                        <%= edit===true?"Update Product":"Add Product"%>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <%- include("../includes/end.ejs")%>
