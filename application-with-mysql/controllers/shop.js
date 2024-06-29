@@ -1,15 +1,15 @@
 const { Cart } = require("../models/Cart");
-const { Product } = require("../models/Product");
+const Product = require("../models/Product");
 
 exports.getAllProducts = (req, res, next) => {
-  Product.fetchAll()
-    .then(([rows, fieldData]) => {
+  Product.findAll()
+    .then((products) =>
       res.render("shop/shop", {
-        pageTitle: "Home",
-        products: rows,
+        pageTitle: "Admin Products",
+        products: products,
         path: "/",
-      });
-    })
+      })
+    )
     .catch((err) => console.log(err));
 };
 
@@ -24,11 +24,12 @@ exports.postAddToCart = (req, res, next) => {
 
 exports.postProductDetails = (req, res, next) => {
   const id = req.params.id;
-  Product.getProductById(id)
-    .then(([result, fieldData]) => {
+  // Product.findAll({ where: { id: id } })
+  Product.findByPk(id)
+    .then((result) => {
       res.render("shop/product", {
         pageTitle: "Product Info",
-        product: result[0],
+        product: result,
         path: "/",
       });
     })
