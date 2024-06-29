@@ -1,10 +1,12 @@
-const mysql = require("mysql2");
+const Sequelize = require("sequelize");
+const sequelize = new Sequelize(
+  "bb9bwvylzpwjeab8fyoh",
+  "uubqu7zpsci8nqwa",
+  "jqqLm7IbhYwnuWhg1YNk",
+  {
+    dialect: "mysql",
+    host: "bb9bwvylzpwjeab8fyoh-mysql.services.clever-cloud.com",
+  }
+);
 
-const pool = mysql.createPool({
-  host: "bb9bwvylzpwjeab8fyoh-mysql.services.clever-cloud.com",
-  user: "uubqu7zpsci8nqwa",
-  password: "jqqLm7IbhYwnuWhg1YNk",
-  database: "bb9bwvylzpwjeab8fyoh",
-});
-
-module.exports = pool.promise();
+module.exports = sequelize;
