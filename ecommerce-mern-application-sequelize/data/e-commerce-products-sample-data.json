@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Apple AirPods Pro (2nd Generation)",
+    "price": 249.99,
+    "description": "The AirPods Pro feature Active Noise Cancellation for immersive sound, Transparency mode for hearing the environment around you, and a customizable fit with three sizes of soft, silicone tips.",
+    "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1694014871985"
+  },
+  {
+    "title": "Samsung Galaxy S23 Ultra",
+    "price": 1199.99,
+    "description": "The Samsung Galaxy S23 Ultra boasts a 6.8-inch Dynamic AMOLED display, a powerful Snapdragon 8 Gen 2 processor, and a versatile quad-camera system with a 200 MP main sensor.",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529723_sd.jpg"
+  },
+  {
+    "title": "Sony WH-1000XM5 Wireless Headphones",
+    "price": 399.99,
+    "description": "These over-ear headphones offer industry-leading noise cancellation, exceptional sound quality, and a comfortable design with up to 30 hours of battery life.",
+    "imageUrl": "https://helios-i.mashable.com/imagery/reviews/01HUTTQhSs8SWLx3ouc0f7q/hero-image.fill.size_1248x702.v1653070267.jpg"
+  },
+  {
+    "title": "Dell XPS 13 (2023)",
+    "price": 1099.99,
+    "description": "The Dell XPS 13 is a high-performance laptop with a 13.4-inch InfinityEdge display, Intel Core i7 processor, 16GB RAM, and 512GB SSD storage in a sleek and portable design.",
+    "imageUrl": "https://cdn.vox-cdn.com/thumbor/aPhO_3X_4y_7nkRYm6yI1CcbQSk=/0x0:4000x4000/2000x1333/filters:focal(2109x2109:2110x2110)/cdn.vox-cdn.com/uploads/chorus_asset/file/24632937/XPS_13_Plus_Extended__3__sl___gy.png"
+  },
+  {
+    "title": "Nikon Z6 II Mirrorless Camera",
+    "price": 1999.95,
+    "description": "The Nikon Z6 II offers a 24.5 MP full-frame sensor, dual EXPEED 6 image processors, 4K UHD video recording, and a robust build quality, making it perfect for both photography and videography.",
+    "imageUrl": "https://images.cdn.us-central1.gcp.commercetools.com/f7c8f2bb-aff1-4581-a826-1ad2527be222/FrontLeft-1659-Z6II--H9HsoF5u-large.png"
+  },
+  {
+    "title": "Microsoft Surface Pro 9",
+    "price": 999.99,
+    "description": "This versatile 2-in-1 device features a 13-inch PixelSense touchscreen, an Intel Core i5 processor, 8GB RAM, and 128GB SSD. It can be used as a tablet or a laptop with the detachable keyboard.",
+    "imageUrl": "https://cdn.mos.cms.futurecdn.net/j7c8ZeyvdGsTGXu3hzT6o4.jpg"
+  },
+  {
+    "title": "GoPro HERO11 Black",
+    "price": 399.99,
+    "description": "The GoPro HERO11 Black is a rugged action camera with 5.3K video recording at 60 fps, a new 27 MP sensor for high-resolution photos, and enhanced stabilization for smooth footage.",
+    "imageUrl": "https://webobjects2.cdw.com/is/image/CDW/7195955?wid=784&hei=477&resMode=bilin&fit=fit,1"
+  },
+  {
+    "title": "iRobot Roomba j7+",
+    "price": 649.99,
+    "description": "The iRobot Roomba j7+ features advanced navigation with PrecisionVision, smart mapping, and automatic dirt disposal with the Clean Base Automatic Dirt Disposal system.",
+    "imageUrl": "https://i.rtings.com/assets/products/91DGQJhX/irobot-roomba-j7-j7-plus/design-medium.jpg?format=auto"
+  },
+  {
+    "title": "Fitbit Charge 5",
+    "price": 179.95,
+    "description": "The Fitbit Charge 5 offers a sleek design with a color AMOLED display, built-in GPS, heart rate monitoring, sleep tracking, and stress management features.",
+    "imageUrl": "https://www.fitbit.com/global/content/dam/fitbit/global/pdp/devices/charge-5/images/desktop/features-cover-charge5-21.jpg"
+  },
+  {
+    "title": "Bose QuietComfort 45",
+    "price": 329.0,
+    "description": "The Bose QuietComfort 45 headphones provide superior noise cancellation, rich sound quality, and comfortable ear cushions with up to 24 hours of battery life.",
+    "imageUrl": "https://d2e6ccujb3mkqf.cloudfront.net/cf94030f-4947-4905-8697-aa02ba8c0ee1-3_85f2f32e-92f1-4e68-a7bd-73540f0b4e1b.jpg"
+  }
+]

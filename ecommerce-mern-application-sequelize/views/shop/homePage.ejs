@@ -1,0 +1,41 @@
+<%- include("../includes/header.ejs")%>
+  <link rel="stylesheet" type="text/css" href="/css/shop/main.css">
+  </head>
+  <body>
+<!-- Navbar using Bootstrap -->
+<%- include("../includes/navbar.ejs")%>
+
+<!-- Product Cards using Bootstrap -->
+<div class="container">
+   <% if(products.length>0){%>
+  <div class="row">
+    <% for(product of products){%>
+      <div class="col-md-4"> 
+      <div class="card">
+        <img src="<%= product.imageUrl%>" class="card-img-top mt-2" alt="<%=product.title%>">
+        <div class="card-body">
+          <h5 class="card-title"><%=product.title%></h5>
+          <p class="card-text"><strong>Price:</strong> $<%=product.price%></p>
+          <p class="card-text card-description"><%=(product.description.length>135)?product.description.substring(0,135)+' . . . ':product.description%></p>
+          <div class="w-100 text-center d-flex flex-row justify-content-between">
+            <form method="post" action="/product-detail">
+              <button class="btn btn-get-product-details"><i class="fa fa-info-circle"></i></i>&nbsp;Show More</button>
+              <input type="hidden" value="<%= product.id%>" name="productId"/>
+            </form>
+            <form action="/add-to-cart" method="post">
+               <input type="hidden" value="<%= product.id%>" name="productId"/>
+            <button class="btn btn-add-to-cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp;Add to Cart</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%}%>
+  </div>
+     <%}else{%>
+       <div class="mt-5 w-100 text-center">
+         <h5>No products to display.</h4>
+       </div>
+       <%}%>
+</div>
+<%- include("../includes/end.ejs")%>

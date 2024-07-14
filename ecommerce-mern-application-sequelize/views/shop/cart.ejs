@@ -1,0 +1,58 @@
+<%- include("../includes/header.ejs")%>
+<link rel="stylesheet" type="text/css" href="/css/shop/cart.css">
+</head>
+<body>
+  <%- include("../includes/navbar.ejs")%>
+  <div class="container cart-container">
+    <h5 class="mt-5">Shopping Cart</h5>
+    <% if(products.length>0){%>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="font-weight-bold">
+          <th scope="col" class="col col-1">Sr No.</th>
+          <th scope="col" class="col col-5">Item</th>
+          <th scope="col" class="col col-1">Quantity</th>
+          <th scope="col" class="col col-2">Price</th>
+          <th scope="col" class="col col-2">Total</th>
+          <th scope="col" class="col col-1 text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let i=1; for (product of products){%>
+        <tr>
+          <td><%= i%></td>
+          <td>
+            <div class="d-flex justify-content-start align-items-center">
+              <img src="<%= product.imageUrl%>" alt="<%= product.title%>"/>
+              <span><%= product.title%></span>
+            </div>
+          </td>
+          <td><%= product.cartItem.quantity%></td>
+          <td>$<%= product.price%></td>
+          <td>$<%= product.price*product.cartItem.quantity%></td>
+          <td class="text-center">
+            <form action="/delete" method="post">
+              <button class="btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+              <input type="hidden" name="productId" value="<%= product.id%>"/>
+            </form>
+          </td>
+        </tr>
+          <%; i++;}%>
+      </tbody>
+    </table>
+    <div class="cart-summary text-right">
+      Total Price: $<%- totalPrice%>
+    </div>
+    <div class="w-100 text-right mt-5">
+      <form method="post" action="/create-order">
+        <button class="btn btn-secondary rounded-0">Checkout</button>
+      </form>
+    </div>
+            
+    <%} else{%>
+      <p class>Shopping cart is empty</p>
+      <%}%>
+  </div>
+
+  <%- include("../includes/end.ejs")%>
+

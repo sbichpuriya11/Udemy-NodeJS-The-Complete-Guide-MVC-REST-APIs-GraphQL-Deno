@@ -1,0 +1,25 @@
+.orders-container {
+  margin-top: 20px;
+}
+.order-item-table {
+  margin-top: 10px;
+}
+.order-item-table th, .order-item-table td {
+  text-align: center; /* Center-align text in table headers and cells */
+}
+.table thead th {
+  background-color: #343a40; /* Dark background for table headers */
+  color: #ffffff; /* White text color for table headers */
+}
+.status-pending {
+  color: #ffc107; /* Yellow for pending status */
+}
+.status-shipped {
+  color: #17a2b8; /* Teal for shipped status */
+}
+.status-delivered {
+  color: #28a745; /* Green for delivered status */
+}
+.status-cancelled {
+  color: #dc3545; /* Red for cancelled status */
+}

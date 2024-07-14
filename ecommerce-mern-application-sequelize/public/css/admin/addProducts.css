@@ -1,0 +1,29 @@
+/* Custom CSS for additional styling */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control-label {
+  font-weight: bold;
+}
+
+.btn-submit {
+  background-color: teal;
+  border-color: teal;
+  color:white;
+}
+
+.btn-submit:hover {
+  background-color: royalblue;
+  border-color: royalblue;
+  color:white;
+}
