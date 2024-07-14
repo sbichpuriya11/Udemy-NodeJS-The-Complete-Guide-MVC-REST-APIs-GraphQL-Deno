@@ -1,14 +1,17 @@
 const Product = require("../models/Product");
 
 exports.getAllProducts = (req, res, next) => {
-  Product.findAll()
-    .then((products) =>
+  // Product.findAll()
+  req.user
+    .getProducts()
+    .then((products) => {
+      console.log("PRODUCTS:::::", products);
       res.render("admin/adminProducts", {
         pageTitle: "Admin Products",
         products: products,
         path: "/admin/admin-products",
-      })
-    )
+      });
+    })
     .catch((err) => console.log(err));
 };
 
@@ -22,9 +25,11 @@ exports.getAddProducts = (req, res, next) => {
 
 exports.postEditProduct = (req, res, next) => {
   const id = req.params.id;
-  console.clear();
-  Product.findByPk(id)
-    .then((product) => {
+  // Product.findByPk(id)
+  req.user
+    .getProducts({ where: { id: id } })
+    .then((products) => {
+      const product = products[0];
       if (!product) res.redirect("/");
       res.render("admin/add-product", {
         pageTitle: "Edit Product",
@@ -39,12 +44,22 @@ exports.postEditProduct = (req, res, next) => {
 exports.getPostProduct = (req, res, next) => {
   const { productName, productPrice, productImage, productDescription } =
     req.body;
-  Product.create({
-    name: productName,
-    price: productPrice,
-    image: productImage,
-    description: productDescription,
-  })
+  // Product.create({
+  //   name: productName,
+  //   price: productPrice,
+  //   image: productImage,
+  //   description: productDescription,
+  //   userId: req.user.id,
+  // })
+
+  //Alternate method
+  req.user
+    .createProduct({
+      name: productName,
+      price: productPrice,
+      image: productImage,
+      description: productDescription,
+    })
     .then((result) => {
       console.log("CREATED PRODUCT");
       res.redirect("/admin/products");

@@ -32,17 +32,17 @@
                                 <% for(product of products){%>
                                     <tr>
                                         <td>
-                                            <img src="<%= product.product.image%>" width="30px" />
+                                            <img src="<%= product.image%>" width="30px" />
                                         </td>
                                         <td>
-                                            <%= product.product.name%>
+                                            <%= product.name%>
                                         </td>
-                                        <td>$<%= product.product.price%>
+                                        <td>$<%= product.price%>
                                         </td>
                                         <td>
-                                            <%= product.qty%>
+                                            <%= product.cartItem.quantity%>
                                         </td>
-                                        <td>$<%= product.product.price * product.qty%>
+                                        <td>$<%= product.price * product.cartItem.quantity%>
                                         </td>
 
                                     </tr>
@@ -54,6 +54,13 @@
                                         </tr>
                             </tbody>
                         </table>
+                        <form method="post" action="/create-order">
+                            <div class="form-container">
+                                <button class="btn btn-secondary">Checkout&nbsp;<i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </form>
                         <%}else{%>
                             <h6>Nothing to display</h6>
                             <span>Shopping cart is empty</span>
