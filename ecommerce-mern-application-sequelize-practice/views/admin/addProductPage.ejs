@@ -1,0 +1,42 @@
+<%- include("../includes/header.ejs")%>
+  <link rel="stylesheet" type="text/css" href="/css/admin/addProducts.css">
+  </head>
+  <body>
+<%- include("../includes/navbar.ejs")%>
+<!-- Form to Add New Product using Bootstrap -->
+<div class="container">
+  <div class="form-container mt-5">
+    <h2 class="text-center mb-4"><%- action=='edit'?"Edit Product Details":"Add New Product"%></h2>
+    <form method="post" action="<%= action==='edit'?'/admin/update-product':'/admin/add-products'%>">
+      <div class="form-group">
+        <label for="productName" class="form-control-label">Product Name</label>
+        <input type="text" class="form-control" id="productName" placeholder="Enter product name" name="title" value="<%- action=='edit'?product.title:''%>" required>
+      </div>
+      <div class="form-group">
+        <label for="productDescription" class="form-control-label">Product Description</label>
+        <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" name="description" style="resize: none;" required><%- action==='edit'?product.description:''%></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productImage" class="form-control-label">Product Image URL</label>
+        <input type="url" class="form-control" id="productImage" placeholder="Enter product image URL" name="imageUrl" value="<%- action==='edit'?product.imageUrl:''%>" required>
+      </div>
+      <div class="form-group">
+        <label for="productPrice" class="form-control-label">Product Price</label>
+        <input type="number" class="form-control" id="productPrice" placeholder="Enter product price" step="0.01" name="price" value="<%- action==='edit'?product.price:''%>" required>
+      </div>
+
+      <% if(action==='edit'){%>
+        <input type="hidden" class="form-control" name="productId" value="<%- product.id%>">
+      <%}%>
+      <button type="submit" class="btn btn-submit btn-block"><%- action==='edit'?'Update Product':'Add Product'%></button>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

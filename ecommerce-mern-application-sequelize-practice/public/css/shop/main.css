@@ -1,0 +1,67 @@
+
+.card {
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.card-img-top {
+  width: 100%;
+  height: 200px; 
+  object-fit: contain; 
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  height:50px;
+  overflow: hidden;
+}
+
+.card-text {
+  color: #666;
+}
+
+.card-description{
+  height:100px;
+  word-break:break-all;
+  text-align:justify;
+  overflow: hidden;
+}
+
+
+.btn{
+  font-size:13px;
+}
+
+.btn-get-product-details{
+  background-color:dodgerblue;
+  border-color:dodgerblue;
+  color:white;
+}
+
+.btn-get-product-details:hover{
+  background-color:tomato;
+  border-color:tomato;
+  color:white;
+}
+
+.btn-add-to-cart {
+  background-color: teal;
+  border-color: teal;
+  color:white;
+}
+
+.btn-add-to-cart:hover {
+  background-color: magenta;
+  border-color: magenta;
+  color:white;
+}

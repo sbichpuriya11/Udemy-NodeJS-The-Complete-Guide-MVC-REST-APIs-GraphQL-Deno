@@ -1,0 +1,35 @@
+<!-- <%- include("../includes/header.ejs")%>
+  <link rel="stylesheet" type="text/css" href="/css/shop/ordersDetails.css">
+</head>
+<body>
+  <%- include("../includes/navbar.ejs")%>
+  <div class="container orders-container">
+    <h4 class="my-4 mt-5">Orders Page</h4>
+    <% if(orders.length>0){%>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">User Id</th>
+          <th scope="col">Order Date</th>
+          <!-- <th scope="col">Status</th> -->
+          <!-- <th scope="col">Total Amount</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <% for (order of orders){%>
+          <tr>
+            <td><%= order.id%></td>
+            <td><%= order.user.name%></td>
+            <td><%= order.createdAt.toLocaleDateString('en-GB',{ day: '2-digit', month: 'short', year: 'numeric' })%></td>
+            <!-- <td>Shipped</td>
+            <td>$150.00</td> -->
+          </tr>
+        <%}%>
+      </tbody>
+    </table>
+      <%}else{%>
+        <p>No orders available at this moment.</p>
+        <%}%>
+  </div>
+  <%- include("../includes/end.ejs")%> -->

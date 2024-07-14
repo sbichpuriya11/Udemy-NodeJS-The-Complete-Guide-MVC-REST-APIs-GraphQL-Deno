@@ -1,0 +1,17 @@
+.cart-container {
+  margin-top: 20px;
+}
+.cart-summary {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+th{
+  font-weight:600;
+}
+
+td div>img{
+  width:30px;
+  margin-right:20px;
+}
