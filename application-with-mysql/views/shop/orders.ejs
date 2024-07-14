@@ -1,0 +1,68 @@
+<%- include("../includes/header.ejs")%>
+    <link rel="stylesheet" href="/css/orderList.css">
+    </head>
+
+    <body>
+        <%- include("../includes/navbar.ejs")%>
+            <div class="container">
+                <% if(orders.length>0){%>
+                    <h5 style="text-align: center;">Order List with Products</h5>
+                    <% for(order of orders){%>
+                        <div class="order">
+                            <div class="order-header mui--text-body2" onclick="toggleDetails('order<%= order.id%>')">
+                                <span>Order #<%= order.id%> - <%= order.user.name%></span>
+                                <span>Total:
+                                    <% let totalPrice=0; %>
+                                        $<% order.products.forEach((product)=> {
+                                            totalPrice += product.orderItem.quantity * product.price;
+                                            })
+                                            %>
+                                            <%= totalPrice%>
+                                </span>
+                            </div>
+                            <div class="order-details" id="order<%= order.id%>">
+                                <table class="product-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% order.products.forEach((product)=>{%>
+                                            <tr>
+                                                <th>
+                                                    <%= product.name%>
+                                                </th>
+                                                <th>
+                                                    <%= product.orderItem.quantity%>
+                                                </th>
+                                                <th>
+                                                    <%= product.price%>
+                                                </th>
+
+                                            </tr>
+                                            <%})%>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <%}%>
+
+                            <%}else{%>
+                                <p>Nothing to display</p>
+                                <%}%>
+            </div>
+
+
+
+            <script>
+                function toggleDetails(orderId) {
+                    var details = document.getElementById(orderId);
+                    details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+                }
+            </script>
+            <%- include("../includes/end.ejs")%>

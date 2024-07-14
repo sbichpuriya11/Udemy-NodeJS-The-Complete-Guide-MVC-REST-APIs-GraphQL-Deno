@@ -4,13 +4,14 @@ exports.getAllProducts = (req, res, next) => {
   // Product.findAll()
   req.user
     .getProducts()
-    .then((products) =>
+    .then((products) => {
+      console.log("PRODUCTS:::::", products);
       res.render("admin/adminProducts", {
         pageTitle: "Admin Products",
         products: products,
         path: "/admin/admin-products",
-      })
-    )
+      });
+    })
     .catch((err) => console.log(err));
 };
 
